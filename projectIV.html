@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f6f6f6; /* Set overall background color */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            
+            font-size: 24px; 
+            
+        }
+
+        .header-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 800px; /* Adjust as needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        .header-box header {
+            font-weight: bold; /* Bold text */
+            color: #1E90FF; /* Blue color */
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .chart-container > div {
+            flex: 1;
+            margin: 0 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center; /* Aligning contents to the center */
+            background-color: #ffffff; /* Background color for the visual cards */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a shadow */
+            transition: box-shadow 0.3s ease; /* Adding transition effect */
+        }
+
+        .chart-container > div:hover {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Changing shadow on hover */
+        }
+
+        .chart-container > div#pieChart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .legend {
+            font-size: 14px;
+        }
+
+        .legend rect {
+            width: 15px;
+            height: 15px;
+            stroke: #000;
+        }
+
+        .legend text {
+            font-size: 12px;
+            fill: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <header>Information Visualization – Project 3</header>
+    </div>
+    <div class="chart-container">
+        <div id="barChart"></div>
+        <div id="lineChart"></div>
+    </div>
+    <div class="chart-container">
+        <div id="pieChart">
+            <!-- Content of the pie chart goes here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
